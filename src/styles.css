@@ -1,3 +1,35 @@
 body {
-  background-color: rebeccapurple;
+  background-color: #DCC48E;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px;
+}
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weatherCard {
+  display: flex;
+  flex-direction: column;  
+  justify-content:space-between;
+  align-items: center;
+  background-color: #EAEFD3;
+  width: 50vw;
+  margin: 50px 50px;
+  padding: 50px 50px;
+}
+.weatherCard>div {
+  background-color:#B3C0A4;
+  color: #27233A;
+  height: 33%;
+  width: 50%;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+
 }
