@@ -1,5 +1,5 @@
 body {
-  background-color: #DCC48E;
+  background-color: #dcc48e;
 }
 .navbar {
   display: flex;
@@ -14,22 +14,21 @@ body {
 }
 .weatherCard {
   display: flex;
-  flex-direction: column;  
-  justify-content:space-between;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  background-color: #EAEFD3;
+  background-color: #eaefd3;
   width: 50vw;
   margin: 50px 50px;
   padding: 50px 50px;
 }
-.weatherCard>div {
-  background-color:#B3C0A4;
-  color: #27233A;
+.weatherCard > div {
+  background-color: #b3c0a4;
+  color: #27233a;
   height: 33%;
   width: 50%;
   display: flex;
   padding: 15px;
   align-items: center;
   justify-content: center;
-
 }
