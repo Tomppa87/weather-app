@@ -1,4 +1,5 @@
 import "./styles.css";
+import { getIcon } from "./icons";
 const body = document.querySelector("body");
 function farenheitToCelcius(x) {
   let num = ((x - 32) * 5) / 9;
@@ -12,7 +13,7 @@ const currentLocation = [];
 class Location {
   constructor(name, temperature, conditions) {
     this.name = name;
-    this.temperature = farenheitToCelcius(temperature);
+    this.temperature = farenheitToCelcius(temperature)+" C";
     this.conditions = conditions;
   }
   get celsius() {
@@ -54,7 +55,8 @@ function updateDOM() {
   }
   let date = new Date();
   const dateDiv = document.createElement("div");
-  dateDiv.innerHTML = date;
+  dateDiv.id = "dateDiv"
+  dateDiv.innerHTML = date.toDateString();
   weatherCard.appendChild(dateDiv);
   console.log(date);
   for (const property in currentLocation[0]) {
@@ -64,6 +66,9 @@ function updateDOM() {
     weatherCard.appendChild(weatherProperty);
     content.appendChild(weatherCard);
   }
+  var image = document.createElement("img");
+    image.src = getIcon(currentLocation[0].conditions)
+    weatherCard.appendChild(image)
 }
 const searchBar = document.querySelector("input");
 const searchBtn = document.querySelector("button");
@@ -72,3 +77,4 @@ searchBtn.addEventListener("click", () => {
   const searchInput = searchBar.value;
   getCityData(searchInput);
 });
+
